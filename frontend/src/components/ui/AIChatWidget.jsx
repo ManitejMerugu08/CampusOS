@@ -99,7 +99,7 @@ const AIChatWidget = () => {
                         className="chat-fab"
                         title="Campus AI Assistant"
                     >
-                        <img src="/chatbot-avatar.png" alt="AI Assistant" className="chat-fab-avatar" />
+                        <img src={`${import.meta.env.BASE_URL}chatbot-avatar.png`} alt="AI Assistant" className="chat-fab-avatar" />
                         <span className="chat-fab-pulse"></span>
                         <span className="chat-fab-pulse chat-fab-pulse-delay"></span>
                     </motion.button>
@@ -120,7 +120,7 @@ const AIChatWidget = () => {
                         <div className="chat-card-header">
                             <div className="chat-card-header-left">
                                 <div className="chat-card-avatar-ring">
-                                    <img src="/chatbot-avatar.png" alt="AI" className="chat-card-avatar" />
+                                    <img src={`${import.meta.env.BASE_URL}chatbot-avatar.png`} alt="AI" className="chat-card-avatar" />
                                 </div>
                                 <div>
                                     <div className="chat-card-title">Campus Assistant</div>

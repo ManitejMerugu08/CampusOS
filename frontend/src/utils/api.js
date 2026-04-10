@@ -1,4 +1,9 @@
-const API_BASE_URL = 'http://localhost:5000/api';
+const PRODUCTION_URL = 'https://campusos-api.onrender.com/api'; // Replace with your Render URL after deployment
+const LOCAL_URL = 'http://localhost:5000/api';
+
+const API_BASE_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+    ? LOCAL_URL 
+    : PRODUCTION_URL;
 
 const getAuthHeaders = () => {
     const token = localStorage.getItem('token');
