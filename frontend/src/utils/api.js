@@ -1,4 +1,4 @@
-const PRODUCTION_URL = 'https://campusos-api.onrender.com/api'; // Replace with your Render URL after deployment
+const PRODUCTION_URL = 'https://campusos-z1o5.onrender.com/api';
 const LOCAL_URL = 'http://localhost:5000/api';
 
 const API_BASE_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
