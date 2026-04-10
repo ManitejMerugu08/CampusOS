@@ -1,0 +1,89 @@
+.stat-card {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 140px;
+    border-radius: var(--radius-xl);
+    background: var(--surface-color);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid var(--border-color);
+    z-index: 1;
+}
+
+.stat-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px -10px rgba(15, 23, 42, 0.1);
+    border-color: rgba(99, 102, 241, 0.2);
+}
+
+.stat-icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background-color: var(--bg-color);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.stat-card:hover .stat-icon-wrapper {
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Color Variations */
+.stat-primary .stat-icon-wrapper {
+    background-color: var(--primary-light);
+    color: var(--primary-color);
+}
+
+.stat-success .stat-icon-wrapper {
+    background-color: var(--success-bg);
+    color: var(--success);
+}
+
+.stat-warning .stat-icon-wrapper {
+    background-color: var(--warning-bg);
+    color: var(--warning);
+}
+
+.stat-info .stat-icon-wrapper {
+    background-color: var(--info-bg);
+    color: var(--info);
+}
+
+.stat-glow {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    filter: blur(40px);
+    top: -50px;
+    right: -50px;
+    z-index: -1;
+    opacity: 0.5;
+    transition: opacity 0.3s ease, transform 0.5s ease;
+}
+
+.stat-primary .stat-glow { background-color: rgba(99, 102, 241, 0.15); }
+.stat-success .stat-glow { background-color: rgba(16, 185, 129, 0.15); }
+.stat-warning .stat-glow { background-color: rgba(245, 158, 11, 0.15); }
+.stat-info .stat-glow { background-color: rgba(59, 130, 246, 0.15); }
+
+.stat-card:hover .stat-glow {
+    opacity: 0.8;
+    transform: scale(1.2);
+}
+
+.mr-1 {
+    margin-right: 0.25rem;
+}
+
+.ml-2 {
+    margin-left: 0.5rem;
+}
