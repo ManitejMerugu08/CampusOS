@@ -1,0 +1,32 @@
+# Dependencies
+node_modules/
+
+# Environment Variables
+.env
+**/.env
+
+# Database
+*.db
+*.db-journal
+**/dev.db
+**/dev.db-journal
+
+# Compiled/Build
+dist/
+build/
+.next/
+out/
+.prisma/
+node_modules/@prisma/client/
+
+
+# IDE / System
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Scratch/Debug scripts
+backend/scratch/
+backend/test_webhook.js
+frontend/test_webhook.js
